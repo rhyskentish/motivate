@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+let store = Store(reducer: reducer)
 @main
 struct motivateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(store)
         }
     }
 }
